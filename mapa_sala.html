@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .body_div{
+            width: 100vh;
+            max-width: 1440px;
+            margin: auto;
+        }
+        header{
+            height: 150px;
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(10, 1fr) ;
+            /* repeat(auto-fill, minmax(10%, 1fr));  */
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+
+        .node_curso{
+            width: 400px;
+            height: 25px;
+            background-color: #FDC180;
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            padding: 2px;
+            line-height: 25px
+        }
+        .node_horario{
+            width: 400px;
+            height: 25px;
+            color: #FDC180;
+            font-size: 35px;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="body_div">
+        <header>
+            <img src="senac.png" style="height: fit-content; margin-left: 25px;">
+            <a href="#">
+                <span class="material-symbols-outlined" style="border: 3px solid #F7941D; border-radius: 100%; font-size: 35px; color: #F7941D; margin-right: 25px;">
+                    arrow_back
+                </span>
+            </a>
+        </header>
+        <h2 style="color:#004A8D; font-size: large; float: right; margin: 0px"> 
+            MAPA DE SALA
+        </h2>
+    </div>
+    <nav>
+        <hr style="border: 2px solid#F7941D; width: 100%;">
+        
+        <hr style="border: 1px solid #777777;">
+        <div class="body_div">
+            
+        </div>
+    </nav> 
+    <main class="body_div">
+        <div class="node_curso">
+            INFORMATICA PARA INTERNET</div>
+    </main>
+
+    <script>
+
+    </script>
+</body>
+</html>
