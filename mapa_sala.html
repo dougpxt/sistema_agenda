@@ -9,11 +9,19 @@
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
         }
-        .body_div{
-            width: 100vh;
-            max-width: 1440px;
-            margin: auto;
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+
+        .header_div{
+            width: 1300px;
+            margin: 0 75px
         }
         header{
             height: 150px;
@@ -23,33 +31,48 @@
             justify-content: space-between;
             align-items: center;
         }
-        main{
+
+        #titulos{
+            border: 2px solid transparent;
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            grid-template-rows: repeat(10, 1fr) ;
+        }
+        .titulo_andar{
+            width: 175px;
+            height: 25px;
+            color: #004A8D;
+            font-size: medium;
+            text-align: center;
+            line-height: 25px;
+            margin: 5px;
+        }
+
+        main{
+            box-sizing: border-box;
+            overflow-x: auto;
+            
+            width: 1300px;
+            margin: auto;
+        }
+        #mapa{
+            border: 2px solid #004A8D;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(9, 1fr) ;
             /* repeat(auto-fill, minmax(10%, 1fr));  */
         }
-
-        .material-symbols-outlined {
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
-        }
-
         .node_curso{
-            width: 400px;
+            width: 175px;
             height: 25px;
             background-color: #FDC180;
             color: white;
-            font-size: 15px;
+            font-size: 9px;
             text-align: center;
-            padding: 2px;
-            line-height: 25px
+            line-height: 25px;
+            margin: 5px;
         }
         .node_horario{
-            width: 400px;
+            width: 175px;
             height: 25px;
             color: #FDC180;
             font-size: 35px;
@@ -59,7 +82,7 @@
     </style>
 </head>
 <body>
-    <div class="body_div">
+    <div class="header_div">
         <header>
             <img src="senac.png" style="height: fit-content; margin-left: 25px;">
             <a href="#">
@@ -68,25 +91,45 @@
                 </span>
             </a>
         </header>
-        <h2 style="color:#004A8D; font-size: large; float: right; margin: 0px"> 
-            MAPA DE SALA
-        </h2>
     </div>
-    <nav>
+    <h2 style="color:#004A8D; font-size: large; float: right; margin-right: 25px"> 
+        MAPA DE SALA
+    </h2>
+
+    <nav style="width: 100%;">
         <hr style="border: 2px solid#F7941D; width: 100%;">
         
+        <p>LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM</p>
         <hr style="border: 1px solid #777777;">
-        <div class="body_div">
-            
-        </div>
+
     </nav> 
-    <main class="body_div">
-        <div class="node_curso">
-            INFORMATICA PARA INTERNET</div>
+
+    <main>
+        <div id="titulos">
+            <div class="titulo_andar" style="grid-column: 1/2;"><b>SUBSOLO</b></div>    
+            <div class="titulo_andar" style="grid-column: 3/4;"><b>TÉRREO</b></div>    
+            <div class="titulo_andar" style="grid-column: 5/6;"><b>PRIMEIRO</b></div>    
+            <div class="titulo_andar" style="grid-column: 7/8;"><b>SEGUNDO</b></div>    
+            <div class="titulo_andar" style="grid-column: 9/10;"><b>TERCEIRO</b></div>    
+            <div class="titulo_andar" style="grid-column: 11/12;"><b>QUARTO</b></div>    
+            <div class="titulo_andar" style="grid-column: 13/14;"><b>QUINTO</b></div>    
+        </div>
+
+        <div id="mapa">
+            <div class="node_curso" style="grid-column: 1/2;">
+                INFORMATICA PARA INTERNET</div>
+            <div class="node_curso" style="grid-column: 2/3;">
+                INFORMATICA PARA INTERNET</div>
+        </div>
     </main>
+
 
     <script>
 
+        
+        function append_cursoTag(){
+            
+        }
     </script>
 </body>
 </html>
