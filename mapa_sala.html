@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MAPA DE SALA</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <style>
@@ -17,6 +17,9 @@
             'wght' 400,
             'GRAD' 0,
             'opsz' 24
+        }
+        .visibility_property{
+            visibility: hidden;
         }
 
         header{
@@ -35,10 +38,12 @@
 
         main{            
             overflow-x: auto;
+            scrollbar-color: #ececec transparent;
+            scrollbar-width: thin;
             margin: 100px auto;
         }
         #container_mapa_titulosAndar{
-            width: 1300px;
+            width: 1248px;
             margin: auto;
         }
         #titulos_piso{
@@ -52,7 +57,7 @@
             display: flex;
             flex-direction: column;
             width: 50px;
-            height: 542px;
+            height: fit-content;
         }
         .titulo_piso_node{
             width: 175px;
@@ -65,15 +70,16 @@
         }
         .titulo_sala_node{
             width: 50px;
-            height: 25px;
+            height: 60px;
             color: #004A8D;
             font-size: medium;
             text-align: center;
-            line-height: 25px;
+            line-height: 60px;
             margin: 5px;
         }
 
         #mapa{
+            height: 633.33px;
             border: 2px solid #004A8D;
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -152,9 +158,9 @@
     <nav style="width: 100%; overflow:hidden; white-space: nowrap;">
         <hr style="border: 2px solid#F7941D; width: 100%;">
         
-        <p class="walking-panel">AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO</p>
+        <p class="walking-panel" style="width: fit-content;">AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO</p>
         <hr style="border: 1px solid #777777;">
-
+        <div id="timeSelector"></div>
     </nav> 
 
     <main>
@@ -171,17 +177,150 @@
             
             <div id="titulos_sala">
                 <div class="titulo_sala_node"><b>1</b></div>
+                <div class="titulo_sala_node"><b>2</b></div>
+                <div class="titulo_sala_node"><b>3</b></div>
+                <div class="titulo_sala_node"><b>4</b></div>
+                <div class="titulo_sala_node"><b>5</b></div>
+                <div class="titulo_sala_node"><b>6</b></div>
+                <div class="titulo_sala_node"><b>7</b></div>
+                <div class="titulo_sala_node"><b>8</b></div>
+                <div class="titulo_sala_node"><b>9</b></div>
             </div>
             <div id="mapa">
                 <div class="node_curso_horario" style="grid-column: 1/2; grid-row: 1/2;">
                     <div class="node_curso">
                         INFORMATICA PARA INTERNET</div>
                     <div class="node_horario">
-                    19:00</div>
+                        19:00 · 22:30</div>
                 </div>
-                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 1/2;">
+                <div class="node_curso_horario" style="grid-column: 1/2; grid-row: 6/7;">
                     <div class="node_curso">
-                        INFORMATICA PARA INTERNET</div>
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 1/2; grid-row: 7/8;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 1/2; grid-row: 8/9;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 1/2; grid-row: 9/10;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+
+                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 2/3;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 3/4;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 4/5;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 5/6;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 6/7;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 7/8;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 8/9;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 9/10;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+
+                <div class="node_curso_horario" style="grid-column: 3/4; grid-row: 9/10;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+
+                <div class="node_curso_horario" style="grid-column: 7/8; grid-row: 2/3;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 7/8; grid-row: 3/4;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 7/8; grid-row: 4/5;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 7/8; grid-row: 5/6;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 7/8; grid-row: 6/7;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 7/8; grid-row: 7/8;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 7/8; grid-row: 8/9;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 7/8; grid-row: 9/10;">
+                    <div class="node_curso">
+                        ······························</div>
+                    <div class="node_horario">
+                    --:-- · --:--</div>
                 </div>
             </div>
         </div>
@@ -206,10 +345,35 @@
     </footer>
 
     <script>
+        var node_curso = document.getElementById('node_curso')
+        var node_horario = document.getElementById('node_horario')
+        var node_curso_horario = document.getElementById('nome_curso_horario')
+        const mapa = document.getElementById('mapa')
 
-        
-        function append_cursoTag(){
-            
+        function append_cursoTag(cursoNome, cursoHorario, nodeCursoHorario){
+            const new_node_curso_horario = document.createElement('div')
+            const new_node_curso = document.createElement('div')
+            const new_node_horario = document.createElement('div')
+
+            new_node_curso_horario.classList.add('node_curso_horario')
+            new_node_curso.classList.add('node_curso')
+            new_node_horario.classList.add('node_horario')
+
+            new_node_curso_horario.style.gridColumn = 'x/y'
+            new_node_curso.textContent = x
+            new_node_horario.textContent = x
+
+            mapa.appendChild(new_node_curso_horario)
+        }
+
+        // 
+        window.onload = function(){
+            if (){
+                
+            }
+            // preciso preencher todos espaços do grid do mapa com todos horarios,
+            // se nao existirem deixa em branco
+            append_cursoTag()
         }
     </script>
 </body>
