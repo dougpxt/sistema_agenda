@@ -19,11 +19,12 @@
             'opsz' 24
         }
 
-        .header_div{
-            width: 1300px;
-            margin: 0 75px
-        }
         header{
+            min-width: 500px;
+            max-width: 1300px;
+            margin: 0 auto
+        }
+        #header_div{
             height: 150px;
             width: 100%;
 
@@ -32,12 +33,28 @@
             align-items: center;
         }
 
-        #titulos{
+        main{            
+            overflow-x: auto;
+            margin: 100px auto;
+        }
+        #container_mapa_titulosAndar{
+            width: 1300px;
+            margin: auto;
+        }
+        #titulos_piso{
             border: 2px solid transparent;
             display: grid;
             grid-template-columns: repeat(7, 1fr);
         }
-        .titulo_andar{
+        #titulos_sala{
+            float: left;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+            height: 542px;
+        }
+        .titulo_piso_node{
             width: 175px;
             height: 25px;
             color: #004A8D;
@@ -46,20 +63,30 @@
             line-height: 25px;
             margin: 5px;
         }
-
-        main{
-            box-sizing: border-box;
-            overflow-x: auto;
-            
-            width: 1300px;
-            margin: auto;
+        .titulo_sala_node{
+            width: 50px;
+            height: 25px;
+            color: #004A8D;
+            font-size: medium;
+            text-align: center;
+            line-height: 25px;
+            margin: 5px;
         }
+
         #mapa{
             border: 2px solid #004A8D;
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             grid-template-rows: repeat(9, 1fr) ;
             /* repeat(auto-fill, minmax(10%, 1fr));  */
+        }
+
+        .node_curso_horario{
+            width: 175px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
         }
         .node_curso{
             width: 175px;
@@ -69,60 +96,114 @@
             font-size: 9px;
             text-align: center;
             line-height: 25px;
-            margin: 5px;
         }
         .node_horario{
             width: 175px;
             height: 25px;
             color: #FDC180;
-            font-size: 35px;
+            font-size: 25px;
             text-align: center;
             margin: auto;
+        }
+        .containerfooter{
+            background-color: #24198a;
+            color: #ebebeb;
+            text-align: center;
+            position: relative;
+            left: 0;
+            bottom: 0;
+            background-color: #24198a;
+            color: #EBEBEB;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .walking-panel{
+            animation: walkingPanel 50s linear infinite;
+        }
+        @keyframes walkingPanel {
+            0%{
+                transform: translateX(100%);
+            }
+            50%{
+                transform: translateX(0%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header_div">
-        <header>
+    <header>
+        <div id="header_div">
             <img src="senac.png" style="height: fit-content; margin-left: 25px;">
             <a href="#">
                 <span class="material-symbols-outlined" style="border: 3px solid #F7941D; border-radius: 100%; font-size: 35px; color: #F7941D; margin-right: 25px;">
                     arrow_back
                 </span>
             </a>
-        </header>
-    </div>
+        </div>
+    </header>
     <h2 style="color:#004A8D; font-size: large; float: right; margin-right: 25px"> 
         MAPA DE SALA
     </h2>
 
-    <nav style="width: 100%;">
+    <nav style="width: 100%; overflow:hidden; white-space: nowrap;">
         <hr style="border: 2px solid#F7941D; width: 100%;">
         
-        <p>LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM</p>
+        <p class="walking-panel">AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO AVISO</p>
         <hr style="border: 1px solid #777777;">
 
     </nav> 
 
     <main>
-        <div id="titulos">
-            <div class="titulo_andar" style="grid-column: 1/2;"><b>SUBSOLO</b></div>    
-            <div class="titulo_andar" style="grid-column: 3/4;"><b>TÉRREO</b></div>    
-            <div class="titulo_andar" style="grid-column: 5/6;"><b>PRIMEIRO</b></div>    
-            <div class="titulo_andar" style="grid-column: 7/8;"><b>SEGUNDO</b></div>    
-            <div class="titulo_andar" style="grid-column: 9/10;"><b>TERCEIRO</b></div>    
-            <div class="titulo_andar" style="grid-column: 11/12;"><b>QUARTO</b></div>    
-            <div class="titulo_andar" style="grid-column: 13/14;"><b>QUINTO</b></div>    
-        </div>
-
-        <div id="mapa">
-            <div class="node_curso" style="grid-column: 1/2;">
-                INFORMATICA PARA INTERNET</div>
-            <div class="node_curso" style="grid-column: 2/3;">
-                INFORMATICA PARA INTERNET</div>
+        <div id="container_mapa_titulosAndar">
+            <div id="titulos_piso">
+                <div class="titulo_piso_node" style="grid-column: 1/2;"><b>SUBSOLO</b></div>    
+                <div class="titulo_piso_node" style="grid-column: 3/4;"><b>TÉRREO</b></div>    
+                <div class="titulo_piso_node" style="grid-column: 5/6;"><b>PRIMEIRO</b></div>    
+                <div class="titulo_piso_node" style="grid-column: 7/8;"><b>SEGUNDO</b></div>    
+                <div class="titulo_piso_node" style="grid-column: 9/10;"><b>TERCEIRO</b></div>    
+                <div class="titulo_piso_node" style="grid-column: 11/12;"><b>QUARTO</b></div>    
+                <div class="titulo_piso_node" style="grid-column: 13/14;"><b>QUINTO</b></div>    
+            </div>
+            
+            <div id="titulos_sala">
+                <div class="titulo_sala_node"><b>1</b></div>
+            </div>
+            <div id="mapa">
+                <div class="node_curso_horario" style="grid-column: 1/2; grid-row: 1/2;">
+                    <div class="node_curso">
+                        INFORMATICA PARA INTERNET</div>
+                    <div class="node_horario">
+                    19:00</div>
+                </div>
+                <div class="node_curso_horario" style="grid-column: 2/3; grid-row: 1/2;">
+                    <div class="node_curso">
+                        INFORMATICA PARA INTERNET</div>
+                </div>
+            </div>
         </div>
     </main>
 
+    <footer>
+        <div class="containerfooter">
+            <div class="row">
+                <div class="col-md-6">
+                   
+                    <h2>Sobre o Senac</h2>
+                    <p>O Senac é uma instituição de educação profissional que oferece cursos em diversas áreas, visando capacitar profissionais para o mercado de trabalho.</p>
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>&copy; 2024 Senac - Todos os direitos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
 
